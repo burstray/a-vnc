@@ -1,4 +1,5 @@
 using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
@@ -71,7 +72,14 @@ namespace AVNC.Classes
             //byte[] b = { Convert.ToByte(key) };
             //string str = Encoding.ASCII.GetString(b);
 
-            SendKeys.SendWait(key);
+            try
+            {
+                SendKeys.SendWait(key);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.Message);
+            }
         }
     }
 }

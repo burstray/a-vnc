@@ -53,12 +53,13 @@ namespace AVNC
             this.indexReqCB = new System.Windows.Forms.CheckBox();
             this.label10 = new System.Windows.Forms.Label();
             this.logLV = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.LogMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.clearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -68,7 +69,6 @@ namespace AVNC
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -114,8 +114,6 @@ namespace AVNC
             // viewOnlyCB
             // 
             this.viewOnlyCB.AutoSize = true;
-            this.viewOnlyCB.Checked = true;
-            this.viewOnlyCB.CheckState = System.Windows.Forms.CheckState.Checked;
             this.viewOnlyCB.Location = new System.Drawing.Point(9, 150);
             this.viewOnlyCB.Name = "viewOnlyCB";
             this.viewOnlyCB.Size = new System.Drawing.Size(71, 17);
@@ -162,8 +160,6 @@ namespace AVNC
             // minimizeWindowCB
             // 
             this.minimizeWindowCB.AutoSize = true;
-            this.minimizeWindowCB.Checked = true;
-            this.minimizeWindowCB.CheckState = System.Windows.Forms.CheckState.Checked;
             this.minimizeWindowCB.Location = new System.Drawing.Point(9, 127);
             this.minimizeWindowCB.Name = "minimizeWindowCB";
             this.minimizeWindowCB.Size = new System.Drawing.Size(169, 17);
@@ -175,8 +171,6 @@ namespace AVNC
             // startListeningCB
             // 
             this.startListeningCB.AutoSize = true;
-            this.startListeningCB.Checked = true;
-            this.startListeningCB.CheckState = System.Windows.Forms.CheckState.Checked;
             this.startListeningCB.Location = new System.Drawing.Point(9, 104);
             this.startListeningCB.Name = "startListeningCB";
             this.startListeningCB.Size = new System.Drawing.Size(153, 17);
@@ -188,8 +182,6 @@ namespace AVNC
             // windowsStartupCB
             // 
             this.windowsStartupCB.AutoSize = true;
-            this.windowsStartupCB.Checked = true;
-            this.windowsStartupCB.CheckState = System.Windows.Forms.CheckState.Checked;
             this.windowsStartupCB.Location = new System.Drawing.Point(9, 81);
             this.windowsStartupCB.Name = "windowsStartupCB";
             this.windowsStartupCB.Size = new System.Drawing.Size(139, 17);
@@ -204,6 +196,7 @@ namespace AVNC
             this.loginPasswordTB.Name = "loginPasswordTB";
             this.loginPasswordTB.Size = new System.Drawing.Size(228, 20);
             this.loginPasswordTB.TabIndex = 4;
+            this.loginPasswordTB.Text = "123456";
             this.loginPasswordTB.UseSystemPasswordChar = true;
             // 
             // label3
@@ -241,7 +234,7 @@ namespace AVNC
             this.listenPortTB.Size = new System.Drawing.Size(82, 20);
             this.listenPortTB.TabIndex = 1;
             this.listenPortTB.Value = new decimal(new int[] {
-            80,
+            30722,
             0,
             0,
             0});
@@ -364,6 +357,7 @@ namespace AVNC
             this.logLV.Dock = System.Windows.Forms.DockStyle.Top;
             this.logLV.FullRowSelect = true;
             this.logLV.GridLines = true;
+            this.logLV.HideSelection = false;
             this.logLV.Location = new System.Drawing.Point(3, 3);
             this.logLV.MultiSelect = false;
             this.logLV.Name = "logLV";
@@ -393,12 +387,12 @@ namespace AVNC
             this.LogMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clearToolStripMenuItem});
             this.LogMenu.Name = "LogMenu";
-            this.LogMenu.Size = new System.Drawing.Size(100, 26);
+            this.LogMenu.Size = new System.Drawing.Size(102, 26);
             // 
             // clearToolStripMenuItem
             // 
             this.clearToolStripMenuItem.Name = "clearToolStripMenuItem";
-            this.clearToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.clearToolStripMenuItem.Size = new System.Drawing.Size(101, 22);
             this.clearToolStripMenuItem.Text = "Clear";
             this.clearToolStripMenuItem.Click += new System.EventHandler(this.clearToolStripMenuItem_Click);
             // 
@@ -415,6 +409,17 @@ namespace AVNC
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "About";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(283, 73);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(66, 13);
+            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "MIT License";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // linkLabel3
             // 
@@ -493,17 +498,6 @@ namespace AVNC
             this.toolStripMenuItem2.Text = "Exit";
             this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(283, 73);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(66, 13);
-            this.linkLabel1.TabIndex = 9;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "MIT License";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -518,6 +512,7 @@ namespace AVNC
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "A-VNC";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainFrm_FormClosing);
+            this.Load += new System.EventHandler(this.MainFrm_Load);
             this.Resize += new System.EventHandler(this.MainFrm_Resize);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

@@ -633,54 +633,54 @@ namespace AVNC
 
         private void getRegistryValues()
         {
-            try
-            {
-                RegistryKey rk = Registry.LocalMachine;
-                rk = rk.OpenSubKey("SOFTWARE\\AVNC\\", false); //doesn't need write access
+            //try
+            //{
+            //    RegistryKey rk = Registry.LocalMachine;
+            //    rk = rk.OpenSubKey("SOFTWARE\\AVNC\\", false); //doesn't need write access
 
-                listenPortTB.Value = Convert.ToDecimal((string)rk.GetValue("port"));
-                loginPasswordTB.Text = (string)rk.GetValue("password");
+            //    listenPortTB.Value = Convert.ToDecimal((string)rk.GetValue("port"));
+            //    loginPasswordTB.Text = (string)rk.GetValue("password");
 
-                //load and interpret array for logSettings
-                char[] logCBsettings = ((string)rk.GetValue("logSettings")).ToCharArray();
-                if (logCBsettings[0] == '0') indexReqCB.Checked = false;
-                if (logCBsettings[1] == '0') updateCB.Checked = false;
-                if (logCBsettings[2] == '0') imageReqCB.Checked = false;
-                if (logCBsettings[3] == '0') mouseActionCB.Checked = false;
-                if (logCBsettings[4] == '0') keystrokeCB.Checked = false;
-                if (logCBsettings[5] == '0') errorCB.Checked = false;
-                //</load>
+            //    //load and interpret array for logSettings
+            //    char[] logCBsettings = ((string)rk.GetValue("logSettings")).ToCharArray();
+            //    if (logCBsettings[0] == '0') indexReqCB.Checked = false;
+            //    if (logCBsettings[1] == '0') updateCB.Checked = false;
+            //    if (logCBsettings[2] == '0') imageReqCB.Checked = false;
+            //    if (logCBsettings[3] == '0') mouseActionCB.Checked = false;
+            //    if (logCBsettings[4] == '0') keystrokeCB.Checked = false;
+            //    if (logCBsettings[5] == '0') errorCB.Checked = false;
+            //    //</load>
 
-                //load and interpret array for generalSettings
-                char[] generalCBsettings = ((string)rk.GetValue("generalSettings")).ToCharArray();
-                if (generalCBsettings[0] == '0') windowsStartupCB.Checked = false;
-                if (generalCBsettings[1] == '0') startListeningCB.Checked = false;
-                if (generalCBsettings[2] == '0') minimizeWindowCB.Checked = false;
-                if (generalCBsettings[3] == '1') radioBtnIPv4.Checked = true;
-                if (generalCBsettings[4] == '1') radioBtnIPv6.Checked = true;
-                if (generalCBsettings[5] == '0') viewOnlyCB.Checked = false;
+            //    //load and interpret array for generalSettings
+            //    char[] generalCBsettings = ((string)rk.GetValue("generalSettings")).ToCharArray();
+            //    if (generalCBsettings[0] == '0') windowsStartupCB.Checked = false;
+            //    if (generalCBsettings[1] == '0') startListeningCB.Checked = false;
+            //    if (generalCBsettings[2] == '0') minimizeWindowCB.Checked = false;
+            //    if (generalCBsettings[3] == '1') radioBtnIPv4.Checked = true;
+            //    if (generalCBsettings[4] == '1') radioBtnIPv6.Checked = true;
+            //    if (generalCBsettings[5] == '0') viewOnlyCB.Checked = false;
 
-                //</load>
+            //    //</load>
 
-                rk.Close();
-            }
-            catch (Exception)
-            {
-                //set default settings
-                windowsStartupCB.Checked = false;
-                startListeningCB.Checked = false;
-                minimizeWindowCB.Checked = false;
-                radioBtnIPv4.Checked = true;
-                radioBtnIPv6.Checked = false;
-                viewOnlyCB.Checked = false;
+            //    rk.Close();
+            //}
+            //catch (Exception)
+            //{
+            //    //set default settings
+            //    windowsStartupCB.Checked = false;
+            //    startListeningCB.Checked = false;
+            //    minimizeWindowCB.Checked = false;
+            //    radioBtnIPv4.Checked = true;
+            //    radioBtnIPv6.Checked = false;
+            //    viewOnlyCB.Checked = false;
 
-                indexReqCB.Checked = true;
-                updateCB.Checked = false;
-                imageReqCB.Checked = false;
-                mouseActionCB.Checked = false;
-                keystrokeCB.Checked = false;
-                errorCB.Checked = true;
-            }
+            //    indexReqCB.Checked = true;
+            //    updateCB.Checked = false;
+            //    imageReqCB.Checked = false;
+            //    mouseActionCB.Checked = false;
+            //    keystrokeCB.Checked = false;
+            //    errorCB.Checked = true;
+            //}
         }
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
@@ -691,6 +691,11 @@ namespace AVNC
         private void CBSettings_CheckedChanged(object sender, EventArgs e)
         {
             setRegistryValues();
+        }
+
+        private void MainFrm_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

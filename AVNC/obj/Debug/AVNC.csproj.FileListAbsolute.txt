@@ -1,0 +1,14 @@
+I:\!GitHub\a-vnc\AVNC\bin\Debug\AVNC.exe.manifest
+I:\!GitHub\a-vnc\AVNC\bin\Debug\AVNC.application
+I:\!GitHub\a-vnc\AVNC\bin\Debug\AVNC.exe
+I:\!GitHub\a-vnc\AVNC\bin\Debug\AVNC.pdb
+I:\!GitHub\a-vnc\AVNC\obj\Debug\AVNC.csproj.AssemblyReference.cache
+I:\!GitHub\a-vnc\AVNC\obj\Debug\AVNC.LogViewer.resources
+I:\!GitHub\a-vnc\AVNC\obj\Debug\AVNC.MainFrm.resources
+I:\!GitHub\a-vnc\AVNC\obj\Debug\AVNC.Properties.Resources.resources
+I:\!GitHub\a-vnc\AVNC\obj\Debug\AVNC.csproj.GenerateResource.cache
+I:\!GitHub\a-vnc\AVNC\obj\Debug\AVNC.csproj.CoreCompileInputs.cache
+I:\!GitHub\a-vnc\AVNC\obj\Debug\AVNC.exe.manifest
+I:\!GitHub\a-vnc\AVNC\obj\Debug\AVNC.application
+I:\!GitHub\a-vnc\AVNC\obj\Debug\AVNC.exe
+I:\!GitHub\a-vnc\AVNC\obj\Debug\AVNC.pdb
